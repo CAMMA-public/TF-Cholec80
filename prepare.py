@@ -12,10 +12,12 @@ import os
 
 
 URL = "https://s3.unistra.fr/camma_public/datasets/cholec80/cholec80.tar.gz"
-CHUNK_SIZE = 8192
+CHUNK_SIZE = 2 ** 20
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--data_rootdir")
+parser.add_argument("--verify_checksum", action="store_true")
+parser.add_argument("--keep_archive", action="store_true")
 args = parser.parse_args()
 
 
@@ -29,9 +31,27 @@ with requests.get(URL, stream=True) as r:
     for chunk in r.iter_content(chunk_size=CHUNK_SIZE):
       f.write(chunk)
 
+if args.verify_checksum:
+  print("Verifying checksum")
+  m = hashlib.md5()
+  with open(outfile, 'rb') as f:
+    while True:
+      data = f.read(CHUNK_SIZE)
+      if not data:
+        break
+      m.update(data)
+  chk = m.hexdigest()
+  with open("checksum.txt") as f:
+    true_chk = f.read()
+  print("Checksum: {}".format(chk))
+  assert(m.hexdigest() == chk)
+
 print("Extracting files to {}".format(outdir))
 with tarfile.open(outfile, "r") as t:
   t.extractall(outdir)
+
+if not args.keep_archive:
+  os.remove(outfile)
 
 with open("config.json", "r") as f:
   config = json.loads(f.read())

@@ -38,7 +38,7 @@ Surgical instruments __(instrument presence binary labels follow the order from 
 - SpecimenBag
 
 ## Usage
-Download and extract the dataset to your preferred location:
+Download and extract the dataset to your preferred location. You may use the `--verify_checksum` flag to ensure the archive was downloaded without errors. If you wish to keep the archive after extraction please add the `--keep_archive` flag.
  
 ```bash
 python prepare.py --data_rootdir YOUR_LOCATION

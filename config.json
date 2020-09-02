@@ -1,0 +1,10 @@
+{
+  "cholec80_dir": "",
+  "n_batch_shuffle": 256,
+  "n_file_shuffle": 80,
+  "n_interleave_block": 4,
+  "n_interleave_cycle": 6,
+  "n_parallel_interleave_calls": 4,
+  "n_parallel_parse_calls": 4,
+  "n_prefetch": 4
+}

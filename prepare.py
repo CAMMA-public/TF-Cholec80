@@ -60,7 +60,7 @@ if not args.keep_archive:
 with open("config.json", "r") as f:
   config = json.loads(f.read())
 
-config["cholec80_dir"] = os.path.join(outdir, "cholec80")
+config["cholec80_dir"] = outdir #os.path.join(outdir, "cholec80")
 json_string = json.dumps(config, indent=2, sort_keys=True)
 
 with open("config.json", "w") as f:

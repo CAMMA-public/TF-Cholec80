@@ -70,6 +70,7 @@ Storage:
 Libraries:
 - Python 3
 - Tensorflow 2
+- tqdm
 - Matplotlib (needed only for demo notebook)
 
 Developer configuration info:

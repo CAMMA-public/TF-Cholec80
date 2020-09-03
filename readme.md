@@ -17,7 +17,7 @@ _Twinanda, Andru and Shehata, Sherif and Mutter, Didier and Marescaux, Jacques a
 
 
 ## Description
-The Cholec80 dataset contains 80 videos of cholecystectomy surgeries performed by 13 surgeons. Frames extracted from the videos at 1 fps are provided, each frame labeled with the phase and tool presence annotations. The phases have been defined by a senior surgeon in our partner hospital. Since the tools are sometimes hardly visible in the images and therefore difficult to perceive, we define a tool as present in an image if at least half of the tool tip is visible.
+The Cholec80 dataset contains 80 videos of cholecystectomy surgeries performed by 13 surgeons. Frames extracted from the videos at 1 fps are provided, each frame labeled with the phase and tool presence annotations. The phases have been defined by a senior surgeon in our partner hospital. Since the tools are sometimes hardly visible in the images and therefore difficult to perceive, we define a tool as present in an image if at least half of the tooltip is visible.
 
 Surgical phases:
 - Preparation
@@ -63,7 +63,11 @@ Three modes of operation are supported based on the `mode` argument:
 - `INFER`: no shuffling
 
 ## Requirements
+Storage:
+- __Please ensure 166Gb of space are available before downloading__.
+- After extraction and archive removal, the dataset will occupy __85.2 Gb__.
 
+Libraries:
 - Python 3
 - Tensorflow 2
 - Matplotlib (needed only for demo notebook)

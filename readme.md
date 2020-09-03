@@ -57,11 +57,10 @@ By default `make_cholec80` will look for config.json in the current workspace. I
 
 Videos are indexed from 0 to 79. Limiting the dataset to specific videos can be done by supplying a list of indices as the `video_ids` argument. By default all 80 videos will be included.
 
-Three modes of operation are supported based on the mode argument:
-
-- FRAME (default): video shuffling, frame interleaving, minibatch shuffling
-- VIDEO: video shuffling
-- INFER: no shuffling
+Three modes of operation are supported based on the `mode` argument:
+- `FRAME` (default): video shuffling, frame interleaving, minibatch shuffling
+- `VIDEO`: video shuffling
+- `INFER`: no shuffling
 
 ## Requirements
 

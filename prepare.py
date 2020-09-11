@@ -21,10 +21,10 @@ parser.add_argument("--verify_checksum", action="store_true")
 parser.add_argument("--keep_archive", action="store_true")
 args = parser.parse_args()
 
-
 outfile = os.path.join(args.data_rootdir, "cholec80.tar.gz")
 outdir = os.path.join(args.data_rootdir, "cholec80")
 
+# Download
 print("Downloading archive to {}".format(outfile))
 with requests.get(URL, stream=True) as r:
   r.raise_for_status()
@@ -35,6 +35,7 @@ with requests.get(URL, stream=True) as r:
       progress_bar.update(len(chunk) / 10 ** 6)
       f.write(chunk)
 
+# Optional checksum verification
 if args.verify_checksum:
   print("Verifying checksum")
   m = hashlib.md5()
@@ -50,14 +51,17 @@ if args.verify_checksum:
   print("Checksum: {}".format(chk))
   assert(m.hexdigest() == chk)
 
+# Extraction
 print("Extracting files to {}".format(outdir))
 with tarfile.open(outfile, "r") as t:
   t.extractall(outdir)
 
+# Cleanup
 if not args.keep_archive:
   os.remove(outfile)
 
-with open("config.json", "r") as f:
+# Config setup
+with open("tf_cholec80/configs/config.json", "r") as f:
   config = json.loads(f.read())
 
 config["cholec80_dir"] = outdir

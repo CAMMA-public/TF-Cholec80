@@ -27,7 +27,7 @@ _Tong Yu, Didier Mutter, Jacques Marescaux, Nicolas Padoy_
 -------------------
 
 ## Introduction
-Similar to datasets available on `tfds`, *TF-Cholec80* offers a convenient interface for deploying the *Cholec80* dataset within deep learning applications built with Tensorflow. This independent release addresses the shortcomings associated with `tfds` to allow flexible handling of Cholec80 in a variety of scenarios such as single-frame tasks with CNNs, temporal tasks with CNN-RNNs or inference. TF-Cholec80 is based on the code employed in the experiments performed [here](#code).
+Similar to datasets available on `tfds`, *TF-Cholec80* offers a convenient interface for deploying the *Cholec80* dataset within deep learning applications built with Tensorflow. This independent release addresses the shortcomings associated with `tfds` to allow flexible handling of Cholec80 in a variety of scenarios such as single-frame tasks with CNNs, temporal tasks with CNN-RNNs or inference. *TF-Cholec80* is based on the code employed in the experiments performed for this [publication](https://arxiv.org/abs/1812.00033).
 
 ## Data overview
 The *Cholec80* dataset, first introduced [here](#data), contains 80 videos of cholecystectomy surgeries performed by 13 surgeons. Frames extracted from the videos at 1 fps are provided, each frame labeled with the phase and tool presence annotations. The phases have been defined by a senior surgeon in our partner hospital. Since the tools are sometimes hardly visible in the images and therefore difficult to perceive, we define a tool as present in an image if at least half of the tooltip is visible.

@@ -1,5 +1,5 @@
 {
-  "cholec80_dir": "/mnt/sbh/cholec80",
+  "cholec80_dir": "",
   "n_batch_shuffle": 256,
   "n_file_shuffle": 80,
   "n_interleave_block": 4,

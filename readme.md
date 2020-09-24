@@ -51,7 +51,7 @@ Surgical instruments __(instrument presence binary labels follow the order from 
 - SpecimenBag
 
 ## Usage
-** `prepare.py` must be run first before using TF-Cholec80 **. Download and extract the dataset to your preferred location (`--data_rootdir`). You may use the `--verify_checksum` flag to ensure the archive was downloaded without errors. If you wish to keep the archive after extraction please add the `--keep_archive` flag.
+__`prepare.py` must be run first before using TF-Cholec80__ . Download and extract the dataset to __a location (`--data_rootdir`) outside of `tf-cholec80/`__. You may use the `--verify_checksum` flag to ensure the archive was downloaded without errors. If you wish to keep the archive after extraction please add the `--keep_archive` flag.
  
 ```bash
 python prepare.py --data_rootdir YOUR_LOCATION
@@ -97,7 +97,7 @@ Storage:
 
 Libraries:
 - Python 3
-- Tensorflow 1.15 or 2.x
+- Tensorflow 1 (>= 1.4) or 2
 - tqdm
 - Matplotlib (needed only for demo notebooks)
 

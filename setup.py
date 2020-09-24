@@ -9,7 +9,7 @@ setup(
   py_modules=["tf_cholec80"],
   packages=find_packages(include=["tf_cholec80"]),
   install_requires=[
-    "tensorflow>=1.15.0"
+    "tensorflow>=1.4.0"
   ],
   package_data={"tf_cholec80": ["configs/config.json"]}
 )

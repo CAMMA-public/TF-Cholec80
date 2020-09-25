@@ -67,7 +67,7 @@ with open("tf_cholec80/configs/config.json", "r") as f:
 config["cholec80_dir"] = outdir
 json_string = json.dumps(config, indent=2, sort_keys=True)
 
-with open("config.json", "w") as f:
+with open("tf_cholec80/configs/config.json", "w") as f:
   f.write(json_string)
 
 print("All done - config saved to {}".format(

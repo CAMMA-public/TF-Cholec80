@@ -51,12 +51,11 @@ Surgical instruments __(instrument presence binary labels follow the order from 
 - SpecimenBag
 
 ## Usage
-__`prepare.py` must be run first before using TF-Cholec80__ . Download and extract the dataset to __a location (`--data_rootdir`) outside of `tf-cholec80/`__. You may use the `--verify_checksum` flag to ensure the archive was downloaded without errors. If you wish to keep the archive after extraction please add the `--keep_archive` flag.
+__`prepare.py` must be run first before using TF-Cholec80__ . Download and extract the dataset to your preferred  location (`--data_rootdir`). You may use the `--verify_checksum` flag to ensure the archive was downloaded without errors. If you wish to keep the archive after extraction please add the `--keep_archive` flag.
  
 ```bash
 python prepare.py --data_rootdir YOUR_LOCATION
 ```
-
 The path you provided will be written to `tf_cholec80/configs/config.json`.
 
 Create a Tensorflow-compatible `Dataset` using `make_cholec80`:
@@ -83,12 +82,12 @@ After running `prepare.py`, you will be able to use `cholec80_tf1_demo.ipynb` an
 Once the data is downloaded and extracted with `prepare.py`, only `dataset.py` and a `config.json` file are required to use *TF-Cholec80* in your own code. You may also install it afterwards for added convenience:
 
 ```bash
-pip install .
+pip install -e .
 ```
 This will export a copy of your current `config.json` that will be used by *TF-Cholec80* in the future.
 
 ## Surgical phase recognition
-An example of a deep learning task using *TF-Cholec80* can be found [here](). This notebook performs surgical phase recognition with a CNN-biLSTM-CRF with *TF-Cholec80* as the input pipeline.
+An example of a deep learning task using *TF-Cholec80* can be found [here](https://github.com/CAMMA-public/Surgical-Phase-Recognition). A Jupyter notebook (`phase_recognition_demo_tfc.ipynb`) shows surgical phase recognition with a CNN-biLSTM-CRF with *TF-Cholec80* as the input pipeline.
 
 ## Requirements
 Storage:

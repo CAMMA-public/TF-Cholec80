@@ -12,7 +12,7 @@ Library packaging the *Cholec80* dataset for easy handling with Tensorflow.
 
 **EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos (IEEE Transactions on Medical Imaging, 2016)**
 
-_Twinanda, Andru and Shehata, Sherif and Mutter, Didier and Marescaux, Jacques and De Mathelin, Michel and Padoy, Nicolas_
+_Andru Twinanda, Sherif Shehata, Didier Mutter, Jacques Marescaux, Michel De Mathelin, Nicolas Padoy_
 
 [![arXiv](https://img.shields.io/badge/arxiv-1602.03012-red)](https://arxiv.org/abs/1602.03012)
 
@@ -27,7 +27,7 @@ _Tong Yu, Didier Mutter, Jacques Marescaux, Nicolas Padoy_
 -------------------
 
 ## Introduction
-Similar to datasets available on `tfds`, *TF-Cholec80* offers a convenient interface for deploying the *Cholec80* dataset within deep learning applications built with Tensorflow. This independent release addresses the shortcomings associated with `tfds` to allow flexible handling of Cholec80 in a variety of scenarios such as single-frame tasks with CNNs, temporal tasks with CNN-RNNs or inference. *TF-Cholec80* is based on the code employed in the experiments performed for this [publication](https://arxiv.org/abs/1812.00033).
+Similar to datasets available on `tfds`, *TF-Cholec80* offers a convenient interface for deploying the *Cholec80* dataset within deep learning applications built with Tensorflow. This independent release addresses the shortcomings associated with `tfds` to allow flexible handling of Cholec80 in a variety of scenarios such as single-frame tasks with CNNs, temporal tasks with CNN-RNNs or inference. *TF-Cholec80* is based on the code employed in the experiments performed for this [publication](https://arxiv.org/abs/1812.00033). The demo we provide has two versions: one for TF 1.x and one for TF 2.x.
 
 ## Data overview
 The *Cholec80* dataset, first introduced [here](#data), contains 80 videos of cholecystectomy surgeries performed by 13 surgeons. Frames extracted from the videos at 1 fps are provided, each frame labeled with the phase and tool presence annotations. The phases have been defined by a senior surgeon in our partner hospital. Since the tools are sometimes hardly visible in the images and therefore difficult to perceive, we define a tool as present in an image if at least half of the tooltip is visible.
@@ -110,7 +110,7 @@ Developer configuration info:
 The data itself is associated to this publication; please cite it if using *Cholec80* in any shape or form.
 ```bibtex
 @article{endonet,
-author = {Twinanda, Andru and Shehata, Sherif and Mutter, Didier and Marescaux, Jacques and De Mathelin, Michel and Padoy, Nicolas},
+author = {Andru Twinanda, Sherif Shehata, Didier Mutter, Jacques Marescaux, Michel De Mathelin, Nicolas Padoy},
 year = {2016},
 month = {02},
 title = {EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos},
